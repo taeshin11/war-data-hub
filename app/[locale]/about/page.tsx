@@ -1,39 +1,49 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
-export default function AboutPage({ params: _params }: { params: Promise<{ locale: string }> }) {
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Learn about War Data Hub — our mission, methodology, and commitment to transparent conflict intelligence.',
+  keywords: 'war data, conflict data, military data, war statistics, open source intelligence, OSINT database, about us, conflict intelligence',
+}
+
+export default function AboutPage() {
   return (
-    <div className="max-w-3xl mx-auto space-y-8">
-      <h1 className="text-3xl font-bold text-gray-900">About War Data Hub</h1>
-      <div className="prose prose-gray max-w-none space-y-4">
-        <p className="text-gray-600 text-lg">
-          War Data Hub is a curated aggregator of conflict research resources, bringing together the most reliable
-          data sources, maps, reports, OSINT tools, and analysis for researchers, journalists, and analysts.
-        </p>
-        <h2 className="text-xl font-semibold text-gray-800">Methodology</h2>
-        <p className="text-gray-600">
-          All resources are manually reviewed and verified. We prioritize free, open-access sources and clearly
-          note when premium resources are included. Each resource is evaluated for reliability, currency, and
-          relevance to conflict research.
-        </p>
-        <h2 className="text-xl font-semibold text-gray-800">Categories</h2>
-        <ul className="space-y-2 text-gray-600">
-          <li><strong>Data:</strong> Downloadable datasets and databases</li>
-          <li><strong>Maps:</strong> Interactive and static conflict maps</li>
-          <li><strong>Reports:</strong> Situation reports and periodic assessments</li>
-          <li><strong>Analysis:</strong> Expert analysis and commentary</li>
-          <li><strong>Official:</strong> Government and intergovernmental sources</li>
-          <li><strong>OSINT:</strong> Open source intelligence tools and investigations</li>
-          <li><strong>Law:</strong> International humanitarian law resources</li>
-          <li><strong>Tracking:</strong> Real-time conflict trackers</li>
-          <li><strong>News:</strong> Reliable news sources with conflict coverage</li>
-        </ul>
-        <h2 className="text-xl font-semibold text-gray-800">Disclaimer</h2>
-        <p className="text-gray-600">
-          This site is for research purposes only. We do not endorse any political position.
-          Always verify information from multiple independent sources.
-        </p>
+    <main className="bg-slate-50 min-h-screen">
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        <nav className="text-sm text-slate-500 mb-8">
+          <Link href="/" className="hover:text-slate-700">Home</Link>
+          <span className="mx-2">/</span>
+          <span>About Us</span>
+        </nav>
+        <h1 className="text-4xl font-bold text-slate-900 mb-4">About War Data Hub</h1>
+        <p className="text-xl text-slate-600 mb-10 leading-relaxed">Open-source repository of conflict datasets, research reports, and war data resources for analysts and researchers</p>
+        <div className="space-y-8">
+          <section className="bg-white rounded-2xl border border-slate-100 p-6">
+            <h2 className="text-2xl font-semibold text-slate-800 mb-4">Our Mission</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">War Data Hub was built on the conviction that access to timely, accurate conflict intelligence should not be limited to governments, think tanks, or expensive subscription services. We believe journalists, researchers, policy analysts, students, and engaged citizens deserve quality information to understand the world&apos;s most pressing security challenges.</p>
+            <p className="text-slate-600 leading-relaxed">In a world where armed conflicts shape economies, displace populations, and determine history&apos;s course, we are committed to making conflict data accessible, transparent, and useful for everyone.</p>
+          </section>
+          <section className="bg-white rounded-2xl border border-slate-100 p-6">
+            <h2 className="text-2xl font-semibold text-slate-800 mb-4">What We Track</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">War Data Hub provides an open-source repository of conflict datasets, research reports, and war data resources for analysts and researchers. Our platform aggregates, verifies, and presents data in a format designed for clarity, so users can quickly understand the current situation and track changes over time.</p>
+            <p className="text-slate-600 leading-relaxed">We cover active conflicts across multiple regions, providing visualizations, timelines, and analysis that contextualizes data within broader geopolitical realities.</p>
+          </section>
+          <section className="bg-white rounded-2xl border border-slate-100 p-6">
+            <h2 className="text-2xl font-semibold text-slate-800 mb-4">Data Sources &amp; Methodology</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">Our data is compiled from: official government reports, United Nations agencies (OCHA, UNHCR, WFP), academic conflict databases (ACLED, SIPRI, Uppsala Conflict Data Program), verified OSINT researchers, and internationally recognized news organizations.</p>
+            <p className="text-slate-600 leading-relaxed">We prioritize source transparency and cross-reference multiple sources. Where sources disagree, we present the range of estimates rather than a single contested figure.</p>
+          </section>
+          <section className="bg-white rounded-2xl border border-slate-100 p-6">
+            <h2 className="text-2xl font-semibold text-slate-800 mb-4">Why This Matters</h2>
+            <p className="text-slate-600 leading-relaxed">Conflict data is inherently sensitive and contested. We strive to present information in a factual, non-partisan manner — to support informed discussion, humanitarian response, and evidence-based policy. The data we track represents real human lives, and that responsibility guides everything we do.</p>
+          </section>
+          <section className="bg-white rounded-2xl border border-slate-100 p-6">
+            <h2 className="text-xl font-semibold text-slate-800 mb-3">Contact Us</h2>
+            <p className="text-slate-600">For inquiries, corrections, or partnership opportunities: <strong>contact@war-data-hub.vercel.app</strong></p>
+          </section>
+        </div>
       </div>
-      <Link href="/" className="inline-block text-blue-600 hover:underline">← Back to resources</Link>
-    </div>
+    </main>
   )
 }

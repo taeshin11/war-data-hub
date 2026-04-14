@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 interface Resource {
   id: string
   title: string
@@ -15,54 +13,46 @@ interface Resource {
   last_verified: string
 }
 
-const categoryColors: Record<string, string> = {
-  data: 'bg-blue-100 text-blue-800',
-  maps: 'bg-green-100 text-green-800',
-  reports: 'bg-purple-100 text-purple-800',
-  analysis: 'bg-indigo-100 text-indigo-800',
-  official: 'bg-red-100 text-red-800',
-  osint: 'bg-orange-100 text-orange-800',
-  law: 'bg-yellow-100 text-yellow-800',
-  tracking: 'bg-teal-100 text-teal-800',
-  news: 'bg-gray-100 text-gray-800',
+const categoryBadgeStyles: Record<string, string> = {
+  data: 'bg-blue-500/10 text-blue-600 ring-1 ring-inset ring-blue-500/20',
+  maps: 'bg-green-500/10 text-green-600 ring-1 ring-inset ring-green-500/20',
+  reports: 'bg-purple-500/10 text-purple-600 ring-1 ring-inset ring-purple-500/20',
+  analysis: 'bg-indigo-500/10 text-indigo-600 ring-1 ring-inset ring-indigo-500/20',
+  official: 'bg-red-500/10 text-red-600 ring-1 ring-inset ring-red-500/20',
+  osint: 'bg-orange-500/10 text-orange-600 ring-1 ring-inset ring-orange-500/20',
+  law: 'bg-yellow-500/10 text-yellow-700 ring-1 ring-inset ring-yellow-500/20',
+  tracking: 'bg-teal-500/10 text-teal-600 ring-1 ring-inset ring-teal-500/20',
+  news: 'bg-slate-500/10 text-slate-600 ring-1 ring-inset ring-slate-500/20',
 }
 
 export default function ResourceCard({ resource }: { resource: Resource }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow flex flex-col gap-3">
-      <div className="flex items-start justify-between gap-2">
-        <div className="flex-1 min-w-0">
-          <h3 className="font-semibold text-gray-900 text-sm leading-snug line-clamp-2">{resource.title}</h3>
-          <Link href={`/org/${resource.org_slug}`} className="text-xs text-blue-600 hover:underline mt-0.5 block">
-            {resource.org}
-          </Link>
+    <a href={resource.url} target="_blank" rel="noopener noreferrer" className="block group">
+      <div className="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-5 h-full flex flex-col">
+        <div className="flex items-start justify-between mb-3">
+          <div className="flex-1 mr-3">
+            <h3 className="font-bold text-slate-900 group-hover:text-teal-700 transition-colors text-sm leading-snug">{resource.title}</h3>
+            <p className="text-xs text-teal-600 font-semibold mt-1">{resource.org}</p>
+          </div>
+          <div className="flex flex-col items-end gap-1.5 shrink-0">
+            <span className={`px-2.5 py-0.5 rounded-full text-xs font-semibold capitalize ${categoryBadgeStyles[resource.category] || 'bg-slate-500/10 text-slate-600 ring-1 ring-inset ring-slate-500/20'}`}>
+              {resource.category}
+            </span>
+            {resource.free && (
+              <span className="text-xs bg-green-50 text-green-700 border border-green-100 px-1.5 py-0.5 rounded font-medium">Free</span>
+            )}
+          </div>
         </div>
-        <div className="flex flex-col gap-1 items-end shrink-0">
-          <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${categoryColors[resource.category] || 'bg-gray-100 text-gray-700'}`}>
-            {resource.category}
-          </span>
-          <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${resource.free ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'}`}>
-            {resource.free ? 'Free' : 'Paid'}
-          </span>
+        <p className="text-slate-600 text-sm line-clamp-2 mb-4 flex-1">{resource.description}</p>
+        <div className="flex items-center justify-between mt-auto">
+          <div className="flex flex-wrap gap-1">
+            {resource.tags.slice(0, 3).map(t => (
+              <span key={t} className="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">{t}</span>
+            ))}
+          </div>
+          <span className="text-teal-600 text-xs font-bold group-hover:text-teal-700 flex items-center gap-0.5 ml-2">Visit ↗</span>
         </div>
       </div>
-      <p className="text-xs text-gray-600 line-clamp-3">{resource.description}</p>
-      <div className="flex flex-wrap gap-1">
-        {resource.tags.slice(0, 4).map(tag => (
-          <span key={tag} className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded">{tag}</span>
-        ))}
-      </div>
-      <div className="flex items-center justify-between mt-auto pt-1">
-        <span className="text-xs text-gray-400">Format: {resource.format}</span>
-        <a
-          href={resource.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs font-medium text-blue-600 hover:text-blue-800 flex items-center gap-1"
-        >
-          Visit ↗
-        </a>
-      </div>
-    </div>
+    </a>
   )
 }

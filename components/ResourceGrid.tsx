@@ -19,6 +19,8 @@ interface Resource {
   last_verified: string
 }
 
+const CATEGORIES = ['all', 'data', 'maps', 'reports', 'analysis', 'official', 'osint', 'law', 'tracking', 'news']
+
 export default function ResourceGrid({ resources }: { resources: Resource[] }) {
   const [search, setSearch] = useState('')
   const [category, setCategory] = useState('all')
@@ -36,18 +38,27 @@ export default function ResourceGrid({ resources }: { resources: Resource[] }) {
     })
   }, [resources, search, category])
 
+  const counts = useMemo(() => {
+    const c: Record<string, number> = { all: resources.length }
+    CATEGORIES.slice(1).forEach(cat => {
+      c[cat] = resources.filter(r => r.category === cat).length
+    })
+    return c
+  }, [resources])
+
   return (
-    <div className="space-y-6">
-      <div className="space-y-3">
-        <SearchBar value={search} onChange={setSearch} placeholder="Search by title, organization, or tags..." />
-        <CategoryTabs active={category} onChange={setCategory} />
-        <p className="text-sm text-gray-500">{filtered.length} resources</p>
-      </div>
+    <div>
+      <SearchBar value={search} onChange={setSearch} placeholder="Search conflict data sources..." />
+      <CategoryTabs active={category} onChange={setCategory} counts={counts} />
+      <p className="text-sm text-slate-500 mb-6 text-center">{filtered.length} resource{filtered.length !== 1 ? 's' : ''} found</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filtered.map(r => <ResourceCard key={r.id} resource={r} />)}
       </div>
       {filtered.length === 0 && (
-        <div className="text-center py-12 text-gray-400">No resources found matching your criteria.</div>
+        <div className="text-center py-16 text-slate-400">
+          <div className="text-4xl mb-3">🔍</div>
+          <p className="font-medium">No resources found matching your criteria.</p>
+        </div>
       )}
     </div>
   )
