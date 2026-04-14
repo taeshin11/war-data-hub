@@ -1,0 +1,9 @@
+{
+  "site": { "title": "战争数据中心", "description": "冲突研究资源 - 数据、地图、报告、OSINT和分析", "tagline": "冲突研究资源指南" },
+  "nav": { "home": "首页", "about": "关于", "categories": "分类" },
+  "home": { "heading": "冲突研究资源", "subheading": "为研究人员提供的数据、地图、报告和OSINT工具", "searchPlaceholder": "按标题、组织或标签搜索...", "allCategories": "全部", "resourceCount": "{count}个资源" },
+  "resource": { "visit": "访问", "free": "免费", "paid": "付费", "lastVerified": "最后验证", "format": "格式" },
+  "categories": { "data": "数据", "maps": "地图", "reports": "报告", "analysis": "分析", "official": "官方", "osint": "OSINT", "law": "法律", "tracking": "跟踪", "news": "新闻" },
+  "about": { "title": "关于战争数据中心", "description": "战争数据中心为研究人员、记者和分析师策划冲突研究资源。", "methodology": "所有资源均经过人工审查和验证。" },
+  "footer": { "disclaimer": "仅供研究使用。请始终从多个来源核实信息。", "updated": "更新于" }
+}

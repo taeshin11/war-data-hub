@@ -1,0 +1,9 @@
+{
+  "site": { "title": "ウォーデータハブ", "description": "紛争研究リソース - データ、地図、レポート、OSINTと分析", "tagline": "紛争研究リソースガイド" },
+  "nav": { "home": "ホーム", "about": "概要", "categories": "カテゴリ" },
+  "home": { "heading": "紛争研究リソース", "subheading": "研究者向けのデータ、地図、レポート、OSINTツール", "searchPlaceholder": "タイトル、組織、タグで検索...", "allCategories": "すべて", "resourceCount": "{count}件のリソース" },
+  "resource": { "visit": "訪問", "free": "無料", "paid": "有料", "lastVerified": "最終確認", "format": "形式" },
+  "categories": { "data": "データ", "maps": "地図", "reports": "レポート", "analysis": "分析", "official": "公式", "osint": "OSINT", "law": "法律", "tracking": "追跡", "news": "ニュース" },
+  "about": { "title": "ウォーデータハブについて", "description": "ウォーデータハブは、研究者、ジャーナリスト、アナリストのための紛争研究リソースをキュレーションします。", "methodology": "すべてのリソースは手動でレビューおよび確認されています。" },
+  "footer": { "disclaimer": "研究目的のみ。常に複数のソースから情報を確認してください。", "updated": "更新日" }
+}

@@ -1,0 +1,46 @@
+{
+  "site": {
+    "title": "War Data Hub",
+    "description": "Curated conflict research resources - data, maps, reports, OSINT, and analysis",
+    "tagline": "Your guide to conflict research resources"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "categories": "Categories"
+  },
+  "home": {
+    "heading": "Conflict Research Resources",
+    "subheading": "Curated data, maps, reports, OSINT and analysis tools for conflict researchers",
+    "searchPlaceholder": "Search by title, organization, or tags...",
+    "allCategories": "All",
+    "resourceCount": "{count} resources"
+  },
+  "resource": {
+    "visit": "Visit",
+    "free": "Free",
+    "paid": "Paid",
+    "lastVerified": "Last verified",
+    "format": "Format"
+  },
+  "categories": {
+    "data": "Data",
+    "maps": "Maps",
+    "reports": "Reports",
+    "analysis": "Analysis",
+    "official": "Official",
+    "osint": "OSINT",
+    "law": "Law",
+    "tracking": "Tracking",
+    "news": "News"
+  },
+  "about": {
+    "title": "About War Data Hub",
+    "description": "War Data Hub is a curated aggregator of conflict research resources, bringing together the most reliable data sources, maps, reports, OSINT tools, and analysis for researchers, journalists, and analysts.",
+    "methodology": "All resources are manually reviewed and verified. We prioritize free, open-access sources and note when premium resources are included."
+  },
+  "footer": {
+    "disclaimer": "For research purposes only. Always verify information from multiple sources.",
+    "updated": "Updated"
+  }
+}

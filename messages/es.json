@@ -1,0 +1,9 @@
+{
+  "site": { "title": "Hub de Datos de Guerra", "description": "Recursos de investigación de conflictos - datos, mapas, informes, OSINT y análisis", "tagline": "Tu guía de recursos de investigación de conflictos" },
+  "nav": { "home": "Inicio", "about": "Acerca de", "categories": "Categorías" },
+  "home": { "heading": "Recursos de Investigación de Conflictos", "subheading": "Datos, mapas, informes y herramientas OSINT para investigadores", "searchPlaceholder": "Buscar por título, organización o etiquetas...", "allCategories": "Todos", "resourceCount": "{count} recursos" },
+  "resource": { "visit": "Visitar", "free": "Gratis", "paid": "Pago", "lastVerified": "Última verificación", "format": "Formato" },
+  "categories": { "data": "Datos", "maps": "Mapas", "reports": "Informes", "analysis": "Análisis", "official": "Oficial", "osint": "OSINT", "law": "Derecho", "tracking": "Seguimiento", "news": "Noticias" },
+  "about": { "title": "Acerca del Hub de Datos de Guerra", "description": "El Hub de Datos de Guerra es un agregador curado de recursos para investigadores, periodistas y analistas.", "methodology": "Todos los recursos son revisados y verificados manualmente." },
+  "footer": { "disclaimer": "Solo para fines de investigación. Siempre verifica la información de múltiples fuentes.", "updated": "Actualizado" }
+}

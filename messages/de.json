@@ -1,0 +1,9 @@
+{
+  "site": { "title": "Kriegsdaten-Hub", "description": "Konfliktforschungsressourcen - Daten, Karten, Berichte, OSINT und Analysen", "tagline": "Ihr Leitfaden für Konfliktforschungsressourcen" },
+  "nav": { "home": "Startseite", "about": "Über uns", "categories": "Kategorien" },
+  "home": { "heading": "Konfliktforschungsressourcen", "subheading": "Daten, Karten, Berichte und OSINT-Tools für Forscher", "searchPlaceholder": "Nach Titel, Organisation oder Tags suchen...", "allCategories": "Alle", "resourceCount": "{count} Ressourcen" },
+  "resource": { "visit": "Besuchen", "free": "Kostenlos", "paid": "Kostenpflichtig", "lastVerified": "Zuletzt verifiziert", "format": "Format" },
+  "categories": { "data": "Daten", "maps": "Karten", "reports": "Berichte", "analysis": "Analyse", "official": "Offiziell", "osint": "OSINT", "law": "Recht", "tracking": "Verfolgung", "news": "Nachrichten" },
+  "about": { "title": "Über den Kriegsdaten-Hub", "description": "Der Kriegsdaten-Hub ist ein kuratierter Aggregator von Ressourcen für Forscher, Journalisten und Analysten.", "methodology": "Alle Ressourcen werden manuell überprüft und verifiziert." },
+  "footer": { "disclaimer": "Nur für Forschungszwecke. Überprüfen Sie Informationen immer aus mehreren Quellen.", "updated": "Aktualisiert" }
+}

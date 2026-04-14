@@ -1,0 +1,9 @@
+{
+  "site": { "title": "전쟁 데이터 허브", "description": "분쟁 연구 리소스 - 데이터, 지도, 보고서, OSINT 및 분석", "tagline": "분쟁 연구 리소스 가이드" },
+  "nav": { "home": "홈", "about": "소개", "categories": "카테고리" },
+  "home": { "heading": "분쟁 연구 리소스", "subheading": "분쟁 연구자를 위한 데이터, 지도, 보고서, OSINT 및 분석 도구", "searchPlaceholder": "제목, 기관 또는 태그로 검색...", "allCategories": "전체", "resourceCount": "리소스 {count}개" },
+  "resource": { "visit": "방문", "free": "무료", "paid": "유료", "lastVerified": "최종 확인", "format": "형식" },
+  "categories": { "data": "데이터", "maps": "지도", "reports": "보고서", "analysis": "분석", "official": "공식", "osint": "OSINT", "law": "법률", "tracking": "추적", "news": "뉴스" },
+  "about": { "title": "전쟁 데이터 허브 소개", "description": "전쟁 데이터 허브는 연구자, 기자 및 분석가를 위한 분쟁 연구 리소스를 큐레이션합니다.", "methodology": "모든 리소스는 수동으로 검토 및 확인됩니다." },
+  "footer": { "disclaimer": "연구 목적으로만 사용하세요. 항상 여러 소스에서 정보를 확인하세요.", "updated": "업데이트됨" }
+}
