@@ -27,10 +27,10 @@ export const metadata: Metadata = {
     description: 'Open-source repository of conflict datasets, research reports, and war data resources for analysts and researchers',
   },
   verification: {
-    google: 'add-your-google-site-verification-here',
+    google: 'WddgcbVJsL2BGHNAje5m6DK56IcR0Mw5UOqozI2Xtrc',
   },
   other: {
-    'google-adsense-account': 'ca-pub-add-your-publisher-id-here',
+    'google-adsense-account': 'ca-pub-7098271335538021',
   },
 }
 
